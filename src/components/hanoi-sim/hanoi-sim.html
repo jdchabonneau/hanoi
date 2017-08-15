@@ -1,0 +1,8 @@
+<!-- Generated template for the HanoiSimComponent component -->
+<div>
+  {{text}}
+</div>
+<button (click)="onStart()">Start</button>
+<p *ngFor="let peg of pegs"> 
+  <span *ngFor="let disk of peg.disks">{{disk.num}}, </span>
+</p>

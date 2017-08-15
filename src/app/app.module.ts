@@ -1,12 +1,15 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { ApplicationRef } from '@angular/core';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
+import { HanoiPage } from '../pages/hanoi/hanoi';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { HanoiSimComponent } from '../components/hanoi-sim/hanoi-sim';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,8 +18,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     AboutPage,
+    HanoiPage,
     ContactPage,
     HomePage,
+    HanoiSimComponent,
     TabsPage
   ],
   imports: [
@@ -26,6 +31,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HanoiPage,
     AboutPage,
     ContactPage,
     HomePage,
