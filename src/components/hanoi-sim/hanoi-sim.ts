@@ -29,7 +29,7 @@ export class HanoiSimComponent {
   }
 
   onStart() {
-    this.show();
+    this.show(); //
     this.hanoi(this.pegs[0], 0, this.pegs[1], this.pegs[2]);
   }
 
