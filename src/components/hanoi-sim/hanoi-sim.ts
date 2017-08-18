@@ -33,6 +33,9 @@ export class HanoiSimComponent implements OnInit {
 
   resetDisks(){
     let peg1 = that.pegs[0];
+    for(let i = 0; i < 3; i++){
+      that.pegs[i].disks=[];
+    }
     for (let i = 0; i < that.numDisks; i++) {
       peg1.addDisk(new Disk(i + 1));
     }
@@ -133,8 +136,8 @@ export class HanoiSimComponent implements OnInit {
 
   onStart() {
     this.show(); //
+    this.resetDisks();
     this.hanoi(this.pegs[0], 0, this.pegs[1], this.pegs[2]);
-    this.pegs[2].disks = [];
     this.resetDisks();
   }
 
