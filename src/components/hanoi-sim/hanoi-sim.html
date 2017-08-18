@@ -2,7 +2,7 @@
 <div>
   {{text}}
 </div>
-<button (click)="onStart()">Start</button>
+<canvas #theCanvas [attr.width]='_size*2' [attr.height]='_size'></canvas><button (click)="onStart()">Start</button>
 <p *ngFor="let peg of pegs"> 
   <span *ngFor="let disk of peg.disks">{{disk.num}}, </span>
 </p>
